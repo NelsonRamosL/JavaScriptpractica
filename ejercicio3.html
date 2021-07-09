@@ -39,7 +39,7 @@
         // funciones
         function sumarorestar(num1, num2, sor) {
             let resultado = 0;
-            console.log("num1 :",num1," num2 :",num2);
+            console.log("num1 :", num1, " num2 :", num2);
             if (sor == "suma") {
                 resultado = parseInt(num1) + parseInt(num2);
                 if (resultado <= 0) resultado = 0;
@@ -52,30 +52,39 @@
                 if (resultado <= 0) resultado = 0;
                 return resultado;
             }
-         return  1; 
 
         }
 
         // main
 
-        var numero1 = document.getElementById("valor1").value;
-        var numero2 = document.getElementById("valor2").value;
+
 
         let sumar = document.getElementById('btn-sumar');
         let restar = document.getElementById('btn-restar');
 
-console.log(numero1,numero2);
+        // let numero1 = document.getElementById('valor1').value;
+        // let numero2 = document.getElementById('valor2').value;
+
+
+
 
         sumar.addEventListener('click', function () {
+            let numero1 = document.getElementById('valor1').value;
+            let numero2 = document.getElementById('valor2').value;
+            console.log(numero1, numero2);
             let res = sumarorestar(numero1, numero2, "suma");
-            console.log("sumar :",res );
-            document.getElementById("resultado").innerHTML = res;
+            console.log("sumar :", res);
+            // ClassName retorna un arreglo por eso se tiene que definir un [0] para el primer resultado de la clase resultado
+            document.getElementsByClassName("resultado")[0].innerHTML = res;
         })
 
         restar.addEventListener('click', function () {
+            let numero1 = document.getElementById('valor1').value;
+            let numero2 = document.getElementById('valor2').value;
             let res = sumarorestar(numero1, numero2, "resta");
-            document.getElementById("resultado").innerHTML = res;
-            console.log("restar :",res);
+            // ClassName retorna un arreglo por eso se tiene que definir un [0] para el primer resultado de la clase resultado
+            document.getElementsByClassName("resultado")[0].innerHTML = res;
+            console.log("restar :", res);
         })
 
 
