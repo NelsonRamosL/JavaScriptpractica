@@ -12,15 +12,15 @@
         <h2>
             Paleta de colores
         </h2>
-        <div style="display: flex;">
-            <div style="display: flex;flex-direction: column;">
+        <div style="display: flex; ">
+            <div id="capturabutton" style="display: flex;flex-direction: column;">
                 <button id="btn-1" style="background-color: #e53e3e; width:100px;height: 100px" type="button">
                 </button>
                 <button id="btn-2" style="background-color: #dd6b20; width:100px;height: 100px" type="button">
                 </button>
-                <button id="btn-3" style="background-color: #faf089; width:100px;height: 100px" type="button">
+                <button id="btn-3"  style="background-color: #faf089; width:100px;height: 100px" type="button">
                 </button>
-                <button id="btn-4" style="background-color: #48bb78; width:100px;height: 100px" type="button">
+                <button id="btn-4"  style="background-color: #48bb78; width:100px;height: 100px" type="button">
                 </button>
                 <button id="btn-5" style="background-color: #81e6d9; width:100px;height: 100px" type="button">
                 </button>
@@ -35,8 +35,66 @@
     </div>
 </div>
     <script>
-    // Escríbe aquí tu código
-    </script>
+// Funcione
+function cambiarcolor(color) {
+  document.querySelector("#caja").style.backgroundColor = color;
+}
+
+
+
+    // inicio
+
+// let boton = document.getElementById('btn-1');
+let boton1 = document.getElementById('btn-1');
+let boton2 = document.getElementById('btn-2');
+let boton3 = document.getElementById('btn-3');
+let boton4 = document.getElementById('btn-4');
+let boton5 = document.getElementById('btn-5');
+let boton6 = document.getElementById('btn-6');
+
+
+
+
+boton1.addEventListener('click', function(){
+let color = this.style.backgroundColor;
+cambiarcolor(color);
+console.log(this.style.backgroundColor);
+})
+
+boton2.addEventListener('click', function(){
+let color = this.style.backgroundColor;
+cambiarcolor(color);
+console.log(this.style.backgroundColor);
+})
+
+boton3.addEventListener('click', function(){
+let color = this.style.backgroundColor;
+cambiarcolor(color);
+console.log(this.style.backgroundColor);
+})
+
+boton4.addEventListener('click', function(){
+let color = this.style.backgroundColor;
+cambiarcolor(color);
+console.log(this.style.backgroundColor);
+})
+
+boton5.addEventListener('click', function(){
+let color = this.style.backgroundColor;
+cambiarcolor(color);
+console.log(this.style.backgroundColor);
+})
+
+boton6.addEventListener('click', function(){
+let color = this.style.backgroundColor;
+cambiarcolor(color);
+console.log(this.style.backgroundColor);
+})
+
+
+
+
+</script>
 </body>
 
 </html>
