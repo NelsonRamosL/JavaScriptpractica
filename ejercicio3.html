@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -35,7 +35,54 @@
         </div>
     </div>
     <script>
-    // Escríbe aquí tu código
+
+        // funciones
+        function sumarorestar(num1, num2, sor) {
+            let resultado = 0;
+            console.log("num1 :",num1," num2 :",num2);
+            if (sor == "suma") {
+                resultado = parseInt(num1) + parseInt(num2);
+                if (resultado <= 0) resultado = 0;
+                console.log(resultado)
+                return resultado;
+            }
+
+            if (sor == "resta") {
+                resultado = parseInt(num1) - parseInt(num2);
+                if (resultado <= 0) resultado = 0;
+                return resultado;
+            }
+
+
+            console.log(sor);
+
+        }
+
+        // main
+
+        let numero1 = document.getElementById("valor1").value;
+        let numero2 = document.getElementById("valor2").value;
+
+        let sumar = document.getElementById('btn-sumar');
+        let restar = document.getElementById('btn-restar');
+
+console.log(numero1,numero2);
+
+        sumar.addEventListener('click', function () {
+            let res = sumarorestar(numero1, numero2, "suma");
+            console.log("sumar :",res );
+            document.getElementById("resultado").innerHTML = res;
+        })
+
+        restar.addEventListener('click', function () {
+            let res = sumarorestar(numero1, numero2, "resta");
+            document.getElementById("resultado").innerHTML = res;
+            console.log("restar :",res);
+        })
+
+
+
+
     </script>
 </body>
 
